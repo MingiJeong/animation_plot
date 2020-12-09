@@ -64,8 +64,7 @@ def spin(fig,ax1):
     CSV_FILE_PATH = r'//home/minkbrook/Desktop/boat-house-turning.csv'
     # ROS nitialization and parameters.
 
-    rospy.init_node("real_time_plotter", anonymous=False)
-    rospy.sleep(1)
+
     #rospack = rospkg.RosPack()
     #CSV_FILE_PATH = rospack.get_path('gds_tools') + "/data/" + rospy.get_param('~csv_file_name')
 
@@ -83,8 +82,8 @@ def spin(fig,ax1):
     ts = message_filters.ApproximateTimeSynchronizer([sonde_sub, gps_sub, local_velocity_sub], 100, 0.5, allow_headerless=True)
     ts.registerCallback(gps_sonde_callback)
 
-    data_plot(fig,ax1)
-    #rospy.spin()
+    #data_plot(fig,ax1)
+    rospy.spin()
 
 
 
@@ -187,9 +186,12 @@ def data_plot(fig,ax):
 
 if __name__ == "__main__":
     try:
+        rospy.init_node("real_time_saver", anonymous=False)
+        rospy.sleep(1)
         """
         definition of the figures
         """
+        """# todo remove unnecessary"""
         #boundary of plot
         #style.use('fivethirtyeight')
         global fig, ax1

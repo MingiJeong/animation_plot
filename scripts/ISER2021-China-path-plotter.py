@@ -348,18 +348,6 @@ def data_plot(fig,ax):
         #ax3.tick_params(axis='y', labelsize=20)
 
 
-        """
-        if time[-1] >= 10:
-            for each in ax:
-                each.axvline(x=10, color='gray', linestyle='--')
-
-        if time[-1] >= 72:
-            for each in ax:
-                each.axvline(x=72, color='orange', linestyle='--', LineWidth=3)
-        """
-
-
-
         plt.show()
         plt.pause(0.005)
 
@@ -394,7 +382,7 @@ if __name__ == "__main__":
         """
 
         while not rospy.is_shutdown():
-            data_plot(fig,ax)
+            #data_plot(fig,ax)
             spin(fig, ax)
 
     except rospy.ROSInterruptException:
