@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="animation_plot" type="ISER2021-Sunapee-path-plotter.py" name="plotter" output="screen">
+  </node>
+  <node pkg="animation_plot" type="ISER2021-Sunapee-path-saver.py" name="saver" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="animation_plot" type="ISER2021-China-path-plotter.py" name="plotter" output="screen">
+  </node>
+  <node pkg="animation_plot" type="ISER2021-China-path-saver.py" name="saver" output="screen">
+  </node>
+</launch>

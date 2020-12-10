@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="animation_plot" type="ISER2021-turn-boat-house-gnd-plotter.py" name="plotter" output="screen">
+  </node>
+  <node pkg="animation_plot" type="ISER2021-turn-boat-house-gnd-saver.py" name="saver" output="screen">
+  </node>
+</launch>
